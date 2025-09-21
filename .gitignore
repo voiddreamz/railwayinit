@@ -1,0 +1,20 @@
+# 编译生成的二进制文件
+test_arithmetic
+arithmetic_sequence
+
+# C++编译相关文件
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# IDE/编辑器相关文件
+.vscode/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
