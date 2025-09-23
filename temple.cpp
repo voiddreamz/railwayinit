@@ -6,7 +6,7 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include <unordered_map>temple.cpp
+#include <unordered_map>
 #include <unordered_set>
 #include <set>
 #include <vector>
@@ -133,7 +133,12 @@ const int N = 1e9;
  *
  */
 
-void solve() {}
+void solve() {
+    using namespace std;
+    int n,m,a,b,c,d;
+    cin >> n>> m >> a >> b >> c >> d;
+    cout << n+m << endl;
+}
 
 int main()
 {
