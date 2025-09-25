@@ -135,6 +135,8 @@ const int N = 1e9;
 
 void solve(int n) {
     using namespace std;
+    int i= 1;//temp
+    int num = n / 2;
     
 }
 
@@ -144,6 +146,5 @@ int main()
     int n = 0;
     cin >> n;
     solve(n);
-    
     return 0;
 }
