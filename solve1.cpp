@@ -1,4 +1,4 @@
-#define FAST_EXECUTION
+// #define FAST_EXECUTION
 // #define INTERACTIVE_MODE
 #include <algorithm>
 #include <cmath>
@@ -44,7 +44,7 @@ const long long MOD = 1e9 + 7;
 #endif
 #define REP(n) for (int t = 0; t < n; t++)
 #define FOR(i, n) for (i = 0; i < n; i++)
-#define FFOR(i, j, n) for (i = j; j < n; j++)
+#define FFOR(i, j, n) for (i = j; i < n; i++)
 #define FOR_S(i, n, k) for (i = 0; i < n; i += k)
 #define RFOR(i, n) for (i = n - 1; i >= 0; i--)
 #define RFOR_S(i, n, k) for (i = n - 1; i >= 0; i -= k)
@@ -133,19 +133,34 @@ const int N = 1e9;
  *
  */
 
-void solve() {
+void solve(int n) {
     using namespace std;
-    
+    int i = 1; //temp_number    
+    VEC(int) include_in;
+    FFOR(i,1,n){
+        if(n % i == 0) include_in.push_back(i);
+    }
+    int temp;
+    FOR(i,include_in.size()){
+        temp += include_in[i];
+    }
+    if ( temp == n){
+        cout << n << " its factors are ";
+        FOR(i,include_in.size()){
+            cout << include_in[i] << " ";
+        }
+        cout << endl;
+    }
 }
 
 int main()
 {
     using namespace std;
-    int n;
+    LL n;
+    int i;
     cin >> n;
-    while (n > 0) {
-        solve();
-        n--;
+    FFOR(i,1,n){
+        solve(i);
     }
     return 0;
 }
